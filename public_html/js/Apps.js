@@ -23,7 +23,7 @@ var setCookie = function (cname,cstr,chrs)
     };    
 
 //var fs = "http://localhost/onlinestoreblogger/public_html/";
-var fs = "http://www.googledrive.com/host/0B2_jLO3lNcKXfkw3VXlMdVJ6akNZVlFoOThmZHhVb1Ewd0JvQWtXS2Rad1JrNmpzclhGaFU/public_html/";
+var fs = "https://vrouwkast.github.io/blogspot/public_html/";
 var mr = "30";
 
 var GETCJSONCAT = function (callback){
