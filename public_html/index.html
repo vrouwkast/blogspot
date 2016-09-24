@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <b:if cond='data:blog.url != data:blog.homepageUrl'>
+            <title><data:blog.pageName/></title>
+        <b:else/>
+            <title><data:blog.pageTitle/></title>
+        </b:if>
+    <b:else/>
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <title><data:blog.pageName/></title>
+        <b:else/>
+            <title><data:blog.pageName/></title>
+        </b:if>
+    </b:if>
+    <meta name="keywords" content="shop,online shop,online store"/>
+    <meta name="description" expr:content='data:blog.metaDescription'/>
+    <b:include data='blog' name='all-head-content'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta property="og:site_name" expr:content='data:blog.title'/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" expr:content='data:blog.url'/>
+    <meta property="og:title" expr:content='data:blog.pageTitle'/>
+    <meta property="og:description" expr:content='data:blog.metaDescription'/>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'/>
+    
+    <link rel="stylesheet" href="https://vrouwkast.github.io/blogspot/public_html/bootstrap-3.3.5/css/bootstrap-theme.css" type="text/css" media="screen" title="default" />
+    <link rel="stylesheet" href="https://vrouwkast.github.io/blogspot/public_html/bootstrap-3.3.5/css/bootstrap.css" type="text/css" media="screen" title="default" />
+    <link rel="stylesheet" href="https://vrouwkast.github.io/blogspot/public_html/css/AppsCSS.css" type="text/css" media="screen" title="default" />
+    <script type="text/javascript" src="https://vrouwkast.github.io/blogspot/public_html/js/jquery-1.10.1.min.js" ></script>
+    <script type="text/javascript" src="https://vrouwkast.github.io/blogspot/public_html/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="https://vrouwkast.github.io/blogspot/public_html/bootstrap-3.3.5/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="https://vrouwkast.github.io/blogspot/public_html/js/Apps.js"></script>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68590017-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <b:skin><![CDATA[]]></b:skin>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-blog" role="navigation">
+        <div class="container navbar-cont">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo-nav" href="/">
+                    <img src="https://vrouwkast.github.io/blogspot/public_html/image/logo.png"/>
+                </a>
+            </div> 
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/?p=category">CATEGORY</a></li>
+                    <li>
+                        <form expr:action='data:blog.homepageUrl + &quot;search/&quot;' method='get' name='searchform'>
+                            <input type="text" name="q" class="wb-src" placeholder=" Seek. Find. Enjoy"/>
+                            <button class="btn-src"><span class="glyphicon glyphicon-search"></span></button>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" id="btntrolley" class="nimg"><span id="prdnum" class="prd-num"></span><img class="imgtrolley" /></a></li>
+                    <li><a href="/p/how-to-order.html">HOW TO ORDER</a></li>
+                    <li><a href="/p/contact-us.html">CONTACT</a></li>
+                    <li><button onclick="window.location.href='/search/label/sale?max-results='+mr;" class="btn btn-danger">SALE</button></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    
+    <!-- HOMEPAGE -->
+    <b:if cond='data:blog.url == data:blog.homepageUrl'>     
+        <div class="container con-hmpg">
+            <div class="tab-content tab-content-home">
+                <div role="tabpanel" id="tphome" class="tab-pane" >
+                    <div class="col-md-12 col-hmpg">
+                        <div class="hmpg_c">
+                            <div class="hmpg_t">
+                                <h1>vrouwkast</h1>
+                                <h5>expect the unexpected</h5>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="#tpcategory" class="btn-lets" aria-controls="tpcategory" role="tab" data-toggle="tab">Shopping</a>
+                            </div>
+                            <div class="col-md-12 col_sm">
+                                <h5>FOLLOW</h5>
+                                <a href="http://www.facebook.com/vrouwkast" class="btn btn-sm" target="_blank">FACEBOOK</a>
+                                <a href="http://www.instagram.com/vrouwkast" class="btn btn-sm" target="_blank">INSTAGRAM</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" id="tpcategory" class="tab-pane" >
+                    <div class="container" id="ldcat">
+                        <div class="col-md-12">
+                            <h1>Loading ...</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </b:if>
+    
+    <!-- ITEM PAGE -->        
+    <b:if cond='data:blog.url != data:blog.homepageUrl'>    
+        <div class="container">         
+            <b:section class='secnavtab' id='secnavtab' preferred='yes'>
+                <b:widget id='Label201' locked='false' title='' type='Label'>
+                    <b:includable id='main'>
+                        
+                    </b:includable>
+                </b:widget>
+            </b:section>
+            <div class="col-md-12 col-breadcrumb">
+                <b:section class='main2' id='main2' showaddelement='no'>
+                    <b:widget id='Blog2' locked='true' title='Blog Posts' type='Blog'>
+                        <b:includable id='breadcrumb' var='posts'>
+                            <b:if cond='data:blog.homepageUrl != data:blog.url'>
+                                <b:if cond='data:blog.pageType == "static_page"'>
+                                    <div class='breadcrumbs'><span><a expr:href='data:blog.homepageUrl' rel='tag'>Home</a></span> » <span><data:blog.pageName/></span></div>
+                                <b:else/>
+                                    <b:if cond='data:blog.pageType == "item"'>
+                                    <!-- breadcrumb for the post page -->
+                                        <b:loop values='data:posts' var='post'>
+                                            <b:if cond='data:post.labels'>
+                                                <div class='breadcrumbs' >
+                                                <span><a expr:href='data:blog.homepageUrl'>Home</a></span>
+                                                    <b:loop values='data:post.labels' var='label'>
+                                                        <b:if cond='data:label.isLast == "true"'>
+                                                         » <span><a expr:href='data:label.url'><data:label.name/></a></span>
+                                                        </b:if>
+                                                    </b:loop>
+                                                 » <span><data:post.title/></span>
+                                                </div>
+                                            <b:else/>
+                                                <div class='breadcrumbs'><span><a expr:href='data:blog.homepageUrl' rel='tag'>Home</a></span> » <span>Unlabelled</span> » <span><data:post.title/></span></div>
+                                            </b:if>
+                                        </b:loop>
+                                    <b:else/>
+                                        <b:if cond='data:blog.pageType == "archive"'>
+                                        <!-- breadcrumb for the label archive page and search pages.. -->
+                                            <div class='breadcrumbs'>
+                                                <span><a expr:href='data:blog.homepageUrl'>Home</a></span> » <span>Archives for <data:blog.pageName/></span>
+                                            </div>
+                                        <b:else/>
+                                            <b:if cond='data:blog.pageType == "index"'>
+                                                <div class='breadcrumbs'>
+                                                    <b:if cond='data:blog.pageName == ""'>
+                                                        <span><a expr:href='data:blog.homepageUrl'>Home</a></span> » <span>All posts</span>
+                                                    <b:else/>
+                                                        <h1 class="ps_t"><data:blog.pageName/></h1>
+                                                        <span><a expr:href='data:blog.homepageUrl'>Home</a></span> » <span><data:blog.pageName/></span>
+                                                    </b:if>
+                                                </div>
+                                            </b:if>
+                                        </b:if>
+                                    </b:if>
+                                </b:if>
+                            </b:if>
+                        </b:includable>
+                        <b:includable id='main' var='top'>
+                            <div class='blog-posts hfeed'>
+                                <b:include data='posts' name='breadcrumb'/>
+                            </div>
+                        </b:includable>
+                    </b:widget>
+                </b:section>
+            </div>
+            <div class="col-md-12 col-cntpg">
+                <b:section class='main' id='main' showaddelement='no'>
+                    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                        <b:includable id='post' var='post'>
+                            <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                                <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                                    <b:if cond='data:post.snippet'>
+                                        <!-- TAMPIL HASIL SEARCH -->
+                                            <div class="col-md-2 prd-itm">
+                                                <a expr:href="data:post.url" target="_blank">
+                                                    <div class="itm-img">
+                                                        <script type='text/javascript'>
+                                                            document.write(RESIZEIMG(&quot;<data:post.thumbnailUrl/>&quot;,&quot;<data:post.title/>&quot;));
+                                                        </script>
+                                                    </div>
+                                                </a>
+                                                <div class="itm-dsc">
+                                                    <div class="itm-nm"><a expr:href="data:post.url"><data:post.title/></a></div>
+                                                    <!--<div class="itm-prc"><data:post.timestamp/></div>-->
+                                                    <div class="itm-lbl">
+                                                        <b:if cond='data:post.labels'>
+                                                        <b:loop values='data:post.labels' var='label'>
+                                                        <a expr:href='data:label.url + &quot;?max-results=30&quot;' rel='tag'><data:label.name/></a>
+                                                        <b:if cond='data:label.isLast != &quot;true&quot;'>,</b:if>
+                                                        </b:loop>
+                                                        </b:if>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </b:if>
+                                </b:if>
+                            </b:if>
+                                
+                            <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                                <div style="display: none;"><data:post.body/></div>
+                                <div class="col-md-6 col-prdimg">
+                                    <div class="prd_img" id="loadImg">
+                                        <!--
+                                        <script type='text/javascript'>
+                                            //document.write(RESIZEIMG(&quot;<data:post.thumbnailUrl/>&quot;,&quot;<data:post.title/>&quot;));
+                                        </script>
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-prddetail">
+                                    <div class="prd_detail">
+                                        <h1 class="prd_nm"><data:post.title/></h1>
+                                        <span class="prd_lbl">
+                                            <strong>Tag(s) : </strong> 
+                                            <b:if cond='data:post.labels'>
+                                                <b:loop values='data:post.labels' var='label'>
+                                                    <a expr:href='data:label.url + &quot;?max-results=30&quot;' rel='tag'><data:label.name/></a>
+                                                    <b:if cond='data:label.isLast != &quot;true&quot;'>,</b:if>
+                                                </b:loop>
+                                            </b:if>
+                                        </span>
+                                        <button id="addtocart" class="btn btn-adtocart" expr:value="data:post.id">Add to cart</button>
+                                        <script type="text/javascript">
+                                            CHECKONCART();
+                                        </script>
+                                        <ul class="nav nav-tabs nav-tabs-details" role="tablist">
+                                            <li role="presentation" class="active"><a href="#tbdetails" aria-controls="tbdetails" role="tab" data-toggle="tab">Details</a></li>
+                                            <li role="presentation"><a href="#tbreview" aria-controls="tbreview" role="tab" data-toggle="tab">Review</a></li>
+                                            <li role="presentation"><a href="#tbshare" aria-controls="tbshare" role="tab" data-toggle="tab">Share</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="tbdetails">
+                                                <!--
+                                                <h5>Price</h5>
+                                                <div class="prd_prc">MYR 
+                                                    <script type='text/javascript'>
+                                                        document.write(PRICEPRODUCT());
+                                                    </script>
+                                                </div>
+                                                <h5>Description</h5>
+                                                <div class="prd_dsc">
+                                                    <script type='text/javascript'>
+                                                        document.write(DESCPRODUCT());
+                                                    </script>
+                                                </div>
+                                                -->
+                                                <div class="post_content"><data:post.body/></div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="tbreview">
+                                                <div class="tab-review">
+                                                    <div id="disqus_thread"></div>
+                                                    <script type="text/javascript">
+                                                        var disqus_shortname = 'vrouwkast';
+                                                        (function() {
+                                                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                                        })();
+                                                    </script>
+                                                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="tbshare">
+                                                <div id="fbshare" class="cnl-sr-ic fb" data-toggle="tooltip" data-placement="top" title="Share to Facebook. Opens in a new window."></div>
+                                                <div id="twshare" class="cnl-sr-ic tw" data-toggle="tooltip" data-placement="top" title="Share to Twitter. Opens in a new window."></div>
+                                                <div id="gpshare" class="cnl-sr-ic gp" data-toggle="tooltip" data-placement="top" title="Share to Google+. Opens in a new window."></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <b:else/>
+                                <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                                    <div class="col-md-12 col-stapg">
+                                        <h1><data:post.title/></h1>
+                                        <data:post.body/>
+                                    </div>
+                                </b:if>
+                            </b:if>
+                        </b:includable>
+                    </b:widget>
+                </b:section>
+            </div>
+        </div>
+        
+        <b:if cond='data:blog.pageType != &quot;item&quot;'>
+            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                <div class="pagenavi">
+                    <script type='text/javascript'>
+                    var pageNaviConf = {
+                    perPage: 24,
+                    numPages: 12,
+                    firstText: "First",
+                    lastText: "Last",
+                    nextText: "Next",
+                    prevText: "Prev"
+                    }
+                    </script>
+                    <script src="https://vrouwkast.github.io/blogspot/public_html/js/page-navigation.js"/>
+                </div>
+            </b:if>
+        </b:if>
+    </b:if>
+    
+    <div class="footer">
+        <div class="col-md-12 col-footer">
+            <h2 class="ftr_t">vrouwkast</h2>
+            <span>Welcome to Vrouwkast. Malaysia based online store offering men and women garments and accessories. Founded in September 2015 with the aim of bringing the up to date fashion trends. Let's shop at Vrouwkast.</span>
+        </div>
+        <div class="col-md-12 col-cpr">
+            <div class="cpr_1">
+                <a href="http://www.poslaju.co.my/track-trace/">Track My Parcel</a> |
+                <a href="#">Payment Methods</a>
+            </div>
+            <p>Copyright © 2015, Vrouwkast.com (002468019-X).<br/><small>All Rights Reserved.</small></p>
+        </div>
+    </div>
+    
+    <!-- Alert -->
+    <div class="alert alert-top" id="alerttop">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <span id="alertmsg"></span>
+    </div>
+    
+    <!-- Trolley -->
+    <div class="modal fade" id="myModalTrolley" data-toggle="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal">×</span>
+                    <h4 class="modal-title">Trolley</h4>
+                </div>
+                <div id="loadcart" class="modal-body">
+                    <span>Loading ...</span>
+                </div>
+                <div class="modal-footer">
+                    <button id="emptycart" class="btn btn-primary-vk">Empty Cart</button>
+                    <button id="checkoutnorder" class="btn btn-primary-vk">Check out and Order</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.modal -->
+    
+    <!-- Check out and Order -->
+    <div class="modal fade" id="myModalCheckoutAndOrder" data-backdrop="false" data-toggle="modal" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="closechkout" class="close" data-dismiss="modal">×</span>
+                    <h4 class="modal-title">Check out and Order</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="loadcartvaluefororder"></div>
+                    <form name='contact-form'>
+                        <div class="form-group">
+                            <label for="ContactForm2_contact-form-name">Your Name</label>
+                            <input class='form-control' id='ContactForm2_contact-form-name' name='name' type='text' value=''/>
+                        </div>
+                        <div class="form-group">
+                            <label for="ContactForm2_contact-form-email">Your Email</label>
+                            <input class='form-control' id='ContactForm2_contact-form-email' name='email' type='text' value=''/>
+                        </div>
+                        <div class="form-group">
+                            <label for="ContactForm2_contact-form-email-message">Your Order</label>
+                            <textarea readonly="" class='form-control' id='ContactForm2_contact-form-email-message' name='email-message' rows='5'></textarea>
+                        </div>
+                        <p>
+                            <input class='contact-form-button contact-form-button-submit' id='ContactForm2_contact-form-submit' type='button' value='Send'/>
+                        </p>
+                        <div>
+                            <p class='contact-form-error-message' id='ContactForm2_contact-form-error-message'></p>
+                            <p class='contact-form-success-message' id='ContactForm2_contact-form-success-message'></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    Click Send button to order. Your order will be processed as soon as possible.
+                </div>
+            </div>
+        </div>
+    </div><!-- /.modal -->
+    
+    <link rel="stylesheet" href="https://vrouwkast.github.io/blogspot/public_html/css/bloggerModif.css" type="text/css" media="screen" title="default" />
+</body>
+</html>
