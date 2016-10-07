@@ -475,10 +475,15 @@ button:hover
 
 .nav-tabs.nav-tabs-details {
     margin-top: 10px;
+    border-bottom-color: #eee;
 }
 
 .nav-tabs.nav-tabs-details > li > a {
     border-radius: 0;
+}
+
+.nav-tabs.nav-tabs-details > li.active > a {
+    border-color: #eee;
 }
 
 .prd_detail {
@@ -514,7 +519,7 @@ button:hover
 }
 .prd_detail .btn-adtocart:hover {
     background-color: #000;
-    color: #663333;
+    color: #fff;
 }
 
 .post_content img {
