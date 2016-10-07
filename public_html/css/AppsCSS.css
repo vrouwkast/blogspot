@@ -726,6 +726,8 @@ button:hover
         top: 70px;
         left: 0;
         right: 0;
+        max-height: none;
+        margin: auto;
     }
     .navbar-nav > li > button {
         margin-left: 5%;
