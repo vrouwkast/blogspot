@@ -484,6 +484,7 @@ button:hover
 
 .nav-tabs.nav-tabs-details > li.active > a {
     border-color: #eee;
+    border-bottom-color: transparent;
 }
 
 .prd_detail {
