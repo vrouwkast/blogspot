@@ -702,10 +702,6 @@ button:hover
         background-color: #000;
     }
     
-    .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar{
-        background-color: #ddd;
-    }
-    
     .wb-src {
         margin-left: 0;
         width: 43%;
