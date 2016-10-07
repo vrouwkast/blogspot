@@ -690,8 +690,12 @@ button:hover
         line-height: 30px;
     }
     
-    .navbar-toggle {
+    .navbar-default .navbar-toggle {
         border-color: transparent;
+    }
+    
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
     }
     
     .wb-src {
@@ -715,10 +719,9 @@ button:hover
         border-top: none;
         position: fixed;
         bottom: 0;
-        top: 0;
+        top: 70px;
         left: 0;
         right: 0;
-        margin: auto;
     }
     .navbar-nav > li > button {
         margin-left: 5%;
